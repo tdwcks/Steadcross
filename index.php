@@ -1,18 +1,113 @@
 <?php get_header(); ?>
 	<article class="home">
 		<section class="slider">
-			<div class="grid-container">
-				<div class="swiper-container">
-			        <div class="swiper-wrapper">
-			            <div class="swiper-slide">Slide 1</div>
-			            <div class="swiper-slide">Slide 2</div>
-			            <div class="swiper-slide">Slide 3</div>
-			        </div>
-			        <div class="swiper-pagination"></div>
-			        <div class="swiper-button-next"></div>
-			        <div class="swiper-button-prev"></div>
-			    </div>
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<div class="grid-container">
+			            	<div class="row">
+			            		<div class="col-4">
+				            		<h5>Helping our clients win</h5>
+				            		<h1>450k</h1>
+				            		<h3>New Business in 30 months</h3>
+				            		<a href="">View Case Study</a>
+			            		</div>
+			            	</div>
+			            </div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<div class="grid-container">
+			            	<div class="row">
+			            		<div class="col-4">
+				            		<h5>Helping our clients win</h5>
+				            		<h1>450k</h1>
+				            		<h3>New Business in 30 months</h3>
+			            		</div>
+			            	</div>
+			            </div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<div class="grid-container">
+			            	<div class="row">
+			            		<div class="col-4">
+				            		<h5>Helping our clients win</h5>
+				            		<h1>450k</h1>
+				            		<h3>New Business in 30 months</h3>
+			            		</div>
+			            	</div>
+			            </div>
+		            </div>
+		            
+		        </div>
+		        <div class="swiper-pagination"></div>
+		        <div class="swiper-button-next"></div>
+		        <div class="swiper-button-prev"></div>
 		    </div>
 		</section>
+		<section class="results">
+			<div class="grid-container">
+				<div class="row">
+					<div class="col-3">
+						<h5>Working hard for our clients</h5>
+					</div>
+					<?php 					 
+						$args = array(
+							'post_type' => 'result',
+							'posts_per_page' => '3',
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+					?>
+					<div class="col-3">
+						<h5><?php the_title(); ?></h5>
+					</div>
+					<?php endwhile;?>
+				</div>
+			</div>
+		</section>
+		<section class="description">
+			<div class="grid-container">
+				<div class="row">
+					<div class="col-8">
+						<p class="large bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non arcu vitae ligula cursus lobortis. Maecenas at sodales nisi. </p>
+						<p class="large bold">Sed est enim, placerat eget lacus sit amet, bibendum efficitur mi. Aliquam eleifend magna velit, sagittis auctor orci semper non. Nam placerat, lectus ac hendrerit ullamcorper, libero erat sodales nibh, sed convallis diam tellus sed erat.</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="discovery">
+			<div class="grid-container">
+				<div class="row">
+					<div class="col-4">
+						<a class="discovery-item" href="">
+							<h2>Services</h2>
+							<p>Find out more</p>
+						</a>
+					</div>
+					<div class="col-4">
+						<a class="discovery-item" href="">
+							<h2>Results</h2>
+							<p>Find out more</p>
+						</a>
+					</div>
+					<div class="col-4">
+						<a class="discovery-item" href="">
+							<h2>Why Us?</h2>
+							<p>Find out more</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 	</article>
+	<script>
+	    var swiper = new Swiper('.home .slider .swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        spaceBetween: 30
+	    });
+    </script>
 <?php get_footer(); ?>

@@ -12,7 +12,7 @@ add_filter('show_admin_bar', '__return_false');
 
 // Enqueue Scripts Like a king/Queen 
 function wpb_adding_scripts() {
-wp_register_script('swiper', get_template_directory_uri() . '/js/plugins/swiper.js', array('jquery'),'', true);
+wp_register_script('swiper', get_template_directory_uri() . '/js/plugins/swiper.js', array('jquery'),'', false);
 wp_enqueue_script('swiper');
 }
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' ); 

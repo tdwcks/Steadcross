@@ -8,7 +8,6 @@
 
 // 		Font Families
 // =================================================================
-	
 
 
 // 		Weights
@@ -20,10 +19,13 @@
 
 // 		Base Font
 // =================================================================
-	$mainFont: sans-serif;
+	$mainFont: "sofia-pro", sans-serif;
 	$mainFontSize: 18px;
 
-
+	body {
+		font-family: $mainFont;
+		font-size: $mainFontSize;
+	}
 
 // 		Headings
 // =================================================================
