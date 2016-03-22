@@ -2,42 +2,43 @@
 	<article class="home">
 		<section class="slider">
 			<div class="swiper-container">
-		        <div class="swiper-wrapper">
-		            <div class="swiper-slide">
-		            	<div class="grid-container">
-			            	<div class="row">
-			            		<div class="col-4">
-				            		<h5>Helping our clients win</h5>
-				            		<h1>450k</h1>
-				            		<h3>New Business in 30 months</h3>
-				            		<a href="">View Case Study</a>
-			            		</div>
-			            	</div>
+				<div class="grid-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+				            	<div class="row">
+				            		<div class="col-4">
+					            		<h5>Helping our clients win</h5>
+					            		<h1>450k</h1>
+					            		<h3>New Business in 30 months</h3>
+					            		<a href="">View Case Study</a>
+				            		</div>
+				            	</div>
+				            </div>
 			            </div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<div class="grid-container">
-			            	<div class="row">
-			            		<div class="col-4">
-				            		<h5>Helping our clients win</h5>
-				            		<h1>450k</h1>
-				            		<h3>New Business in 30 months</h3>
-			            		</div>
-			            	</div>
+			            <div class="swiper-slide">
+				            	<div class="row">
+				            		<div class="col-4">
+					            		<h5>Helping our clients win</h5>
+					            		<h1>450k</h1>
+					            		<h3>New Business in 30 months</h3>
+					            		<a href="">View Case Study</a>
+				            		</div>
+				            	</div>
+				            </div>
 			            </div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<div class="grid-container">
-			            	<div class="row">
-			            		<div class="col-4">
-				            		<h5>Helping our clients win</h5>
-				            		<h1>450k</h1>
-				            		<h3>New Business in 30 months</h3>
-			            		</div>
-			            	</div>
+			            <div class="swiper-slide">
+				            	<div class="row">
+				            		<div class="col-4">
+					            		<h5>Helping our clients win</h5>
+					            		<h1>450k</h1>
+					            		<h3>New Business in 30 months</h3>
+					            		<a href="">View Case Study</a>
+				            		</div>
+				            	</div>
+				            </div>
 			            </div>
-		            </div>
-		            
+			        </div>
+			    </div>      
 		        </div>
 		        <div class="swiper-pagination"></div>
 		        <div class="swiper-button-next"></div>
@@ -102,12 +103,11 @@
 		</section>
 	</article>
 	<script>
-	    var swiper = new Swiper('.home .slider .swiper-container', {
+	    var swiper = new Swiper('.home .grid-container .slider .swiper-container', {
 	        pagination: '.swiper-pagination',
 	        paginationClickable: true,
 	        nextButton: '.swiper-button-next',
-	        prevButton: '.swiper-button-prev',
-	        spaceBetween: 30
+	        prevButton: '.swiper-button-prev'
 	    });
     </script>
 <?php get_footer(); ?>

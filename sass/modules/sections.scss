@@ -1,0 +1,20 @@
+// =================================================================
+// 		Miln Ltd
+// 		Sections
+// =================================================================
+
+.slider {
+	width: 100%;
+	background: $colorThree;
+	height: auto;
+	overflow: auto;
+
+	.swiper-slide {
+		background-color: $colorThree;
+		background-image: url('img/slider/slider-bg-1.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: 0 0;
+		height: 420px;
+	}
+}

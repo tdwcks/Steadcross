@@ -52,8 +52,8 @@
 							<ul>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Services</a></li>
-								<li><a href="">Results</a></li>
-									<ul class="submenu">
+								<li><a class="result" href="">Results</a></li>
+									<ul class="submenu result-dd">
 										<li><a href="">Case Studies</a></li>
 										<li><a href="">Testimonials</a></li>
 									</ul>
@@ -62,11 +62,10 @@
 							</ul>
 						</div>
 						<div class="col-3">
-							<a href="tel:+44 (0) 1484 294490">+44 (0) 1484 294490</a>
+							<a class="telephone" href="tel:+44 (0) 1484 294490">+44 (0) 1484 294490</a>
 						</div>
 					</div>
 				</div>
 			</nav>
-			<div class="submenu-holder">
-			</div>
+			<div class="submenu-holder"></div>
 		</header>	

@@ -17,10 +17,9 @@ Version: 1.0
 // =================================================================
 // 		Core
 // =================================================================
-
+	@import 'core/color';
 	@import 'core/typography';
 	@import 'core/base';
-	@import 'core/color';
 	@import 'core/mixins';
 	@import 'core/grid';
 	@import 'core/layout';
@@ -34,6 +33,7 @@ Version: 1.0
 	@import 'modules/footer';
 	@import 'modules/forms';
 	@import 'modules/header';
+	@import 'modules/sections';
 	@import 'modules/links';
 	@import 'modules/navigation';
 

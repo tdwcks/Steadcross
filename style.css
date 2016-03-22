@@ -40,9 +40,10 @@ body {
   font-family: "sofia-pro", sans-serif;
   font-size: 18px; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: inherit;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #26173b; }
 
 h1 {
   font-size: 3.157em; }
@@ -75,7 +76,8 @@ html {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 90%; }
+  width: 90%;
+  max-width: 1200px; }
   @media (min-width: 1130px) {
     .grid-container {
       width: 90%; } }
@@ -740,5 +742,82 @@ button.swiper-pagination-bullet {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
+
+header {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  padding: 35px 0 0 0;
+  background: #fff; }
+  header h1 {
+    text-indent: -9999999px;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background: url(img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    margin-bottom: 35px; }
+  header .col-3 {
+    float: right; }
+    header .col-3 h4 {
+      color: #26173b;
+      margin-top: 10px;
+      width: 175px;
+      float: right;
+      text-align: right;
+      font-size: 1em;
+      font-weight: 300; }
+  header nav {
+    background: #8dbf21;
+    z-index: 10; }
+    header nav ul li {
+      float: left; }
+    header nav ul ul.submenu {
+      position: absolute;
+      display: none;
+      opacity: 0;
+      left: 0;
+      margin-top: 51px;
+      z-index: 50; }
+      header nav ul ul.submenu a {
+        color: #a1a1a1; }
+    header nav a {
+      display: block;
+      font-size: 0.9em;
+      font-weight: 500;
+      padding: 18px 17px;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none; }
+    header nav a.telephone {
+      font-size: 1.1em;
+      font-weight: 300;
+      text-align: right;
+      padding: 15px 0; }
+  header .submenu-holder {
+    display: none;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 50px;
+    background: #efefef; }
+  @media (max-width: 1130px) {
+    header .col-3 {
+      display: none; } }
+
+.slider {
+  width: 100%;
+  background: #26173b;
+  height: auto;
+  overflow: auto; }
+  .slider .swiper-slide {
+    background-color: #26173b;
+    background-image: url("img/slider/slider-bg-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    height: 420px; }
 
 /*# sourceMappingURL=style.css.map */
