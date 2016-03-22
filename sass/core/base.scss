@@ -1,0 +1,21 @@
+// 4D 69 6C 6E  4C 74 64
+// =================================================================
+// 		Miln Ltd
+// 			Digital Experiences
+// 		Base
+// =================================================================
+
+html {
+	font-size: 16px;
+	font-family: $mainFont;
+	background: #F2F5F7;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+.hidden {
+	display: none;
+}
