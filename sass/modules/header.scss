@@ -37,7 +37,7 @@ header {
 	}
 
 	nav {
-		background: $colorOne;
+		@include linear-gradient-b(90deg, $colorOne, $colorTwo);
 		z-index: 10;
 
 		ul li {

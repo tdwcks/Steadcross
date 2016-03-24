@@ -2,5 +2,57 @@
 // =================================================================
 // 		Miln Ltd
 // 			Digital Experiences
-// 		Page Name
+// 		All Pages
 // =================================================================
+
+// 	Why - Steadcross 
+// =================================================================
+
+.why, .approach {
+	.description {
+		padding-bottom: 50px;
+	}
+}
+
+.approach {
+
+	.list {
+		padding-top: 50px;
+
+		.row {
+			&:nth-child(odd) .col-8 {
+			padding-left: 100px;
+			padding-right: 0;
+			}
+
+			&:nth-child(even) .col-8 {
+				padding-right: 100px;
+				padding-left: 0;
+			}
+
+			&:first-child {
+				h3 {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	.cta .link-btn-one {
+		width: 100%;
+		@include aspect-ratio(16, 3);
+
+		h3 {
+			top: 40%;
+		}
+
+		img {
+			width: 15%;
+			top: 7%;
+		}
+	}
+
+	.logo {
+		padding: 0 70px 70px 70px;
+	}
+}

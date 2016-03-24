@@ -4,3 +4,24 @@
 // 			Digital Experiences
 // 		Links
 // =================================================================
+
+.link-btn-one {
+	@include aspect-ratio(16, 8);
+	width: 100%;
+	@include linear-gradient-b(90deg, $colorOne, $colorTwo);
+
+	h3 {
+		position: absolute;
+		top: 36%;
+		color: #fff;
+		width: 60%;
+		left: 75px;
+	}
+
+	img {
+		position: absolute;
+		top: 15%; 
+		right: 0;
+		width: 30%;
+	}
+}

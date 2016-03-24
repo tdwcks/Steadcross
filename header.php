@@ -50,7 +50,7 @@
 					<div class="row">
 						<div class="col-8">
 							<ul>
-								<li><a href="">About Us</a></li>
+								<li><a href="/about">About Us</a></li>
 								<li><a href="">Services</a></li>
 								<li><a class="result" href="">Results</a></li>
 									<ul class="submenu result-dd">

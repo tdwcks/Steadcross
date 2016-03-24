@@ -17,6 +17,8 @@ wp_enqueue_script('swiper');
 }
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' ); 
 
+// Allows us to add pictures
+add_theme_support( 'post-thumbnails' );
 
 
 ?>

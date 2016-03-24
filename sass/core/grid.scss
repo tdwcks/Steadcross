@@ -10,6 +10,18 @@
   }
 }
 
+.grid-inner {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 1000px;
+
+  @include mq("medium") {
+    width: 90%;
+  }
+}
+
 %clearfix:after {
     display:block;
     clear:both;

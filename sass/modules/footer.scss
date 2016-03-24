@@ -2,3 +2,42 @@
 // 		Miln Ltd
 // 		Footer
 // =================================================================
+
+footer {
+	background: $colorThree;
+	height: auto;
+	overflow: auto;
+	width: 100%;
+	padding: 50px 0px 35px 0;
+	font-size: 0.9em;
+
+	h5 {
+		color: $colorOne;
+	}
+
+	p {
+		color: #fff;
+		font-weight: 300;
+	}
+
+	img {
+		width: 60px;
+		heihgt: 60px;
+	}
+
+	a {
+		padding: 12px 0 0 0;
+		color: #fff;
+		display: inline-block;
+		text-decoration: none;
+		border-bottom: 1px solid #fff;
+
+		&:last-child {
+			padding-top: 5px;
+		}
+	}
+
+	.col-2 {
+		display: none;
+	}
+}

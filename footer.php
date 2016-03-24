@@ -2,7 +2,7 @@
 	<footer>
 		<div class="grid-container">
 			<div class="col-4">
-				<img src="">
+				<img src="<?php bloginfo('template_directory');?>/img/logo-symbol.svg">
 			</div>
 			<div class="col-3">
 				<h5>Steadcross Solutions Ltd</h5>
