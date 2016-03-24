@@ -2,9 +2,9 @@
 	<article class="home">
 		<section class="slider">
 			<div class="swiper-container">
-				<div class="grid-container">
 			        <div class="swiper-wrapper">
 			            <div class="swiper-slide">
+			           		<div class="grid-container">
 				            	<div class="row">
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
@@ -16,6 +16,7 @@
 				            </div>
 			            </div>
 			            <div class="swiper-slide">
+			            	<div class="grid-container">
 				            	<div class="row">
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
@@ -27,6 +28,7 @@
 				            </div>
 			            </div>
 			            <div class="swiper-slide">
+			            	<div class="grid-container">
 				            	<div class="row">
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
@@ -37,8 +39,7 @@
 				            	</div>
 				            </div>
 			            </div>
-			        </div>
-			    </div>      
+			        </div>  
 		        </div>
 		        <div class="swiper-pagination"></div>
 		        <div class="swiper-button-next"></div>
@@ -49,7 +50,7 @@
 			<div class="grid-container">
 				<div class="row">
 					<div class="col-3">
-						<h5>Working hard for our clients</h5>
+						<h4>Working hard </br> for our clients</h4>
 					</div>
 					<?php 					 
 						$args = array(
@@ -71,8 +72,7 @@
 				<div class="row">
 					<div class="col-8">
 						<p class="large bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non arcu vitae ligula cursus lobortis. Maecenas at sodales nisi. </p>
-						<p class="large bold">Sed est enim, placerat eget lacus sit amet, bibendum efficitur mi. Aliquam eleifend magna velit, sagittis auctor orci semper non. Nam placerat, lectus ac hendrerit ullamcorper, libero erat sodales nibh, sed convallis diam tellus sed erat.</p>
-
+						<p class="large">Sed est enim, placerat eget lacus sit amet, bibendum efficitur mi. Aliquam eleifend magna velit, sagittis auctor orci semper non. Nam placerat, lectus ac hendrerit ullamcorper, libero erat sodales nibh, sed convallis diam tellus sed erat.</p>
 					</div>
 				</div>
 			</div>
@@ -81,20 +81,20 @@
 			<div class="grid-container">
 				<div class="row">
 					<div class="col-4">
-						<a class="discovery-item" href="">
-							<h2>Services</h2>
+						<a class="discovery-item red" href="">
+							<h3>Services</h3>
 							<p>Find out more</p>
 						</a>
 					</div>
 					<div class="col-4">
-						<a class="discovery-item" href="">
-							<h2>Results</h2>
+						<a class="discovery-item green" href="">
+							<h3>Results</h3>
 							<p>Find out more</p>
 						</a>
 					</div>
 					<div class="col-4">
-						<a class="discovery-item" href="">
-							<h2>Why Us?</h2>
+						<a class="discovery-item blue" href="">
+							<h3>Why Us?</h3>
 							<p>Find out more</p>
 						</a>
 					</div>
@@ -103,7 +103,7 @@
 		</section>
 	</article>
 	<script>
-	    var swiper = new Swiper('.home .grid-container .slider .swiper-container', {
+	    var swiper = new Swiper('.home .slider .swiper-container', {
 	        pagination: '.swiper-pagination',
 	        paginationClickable: true,
 	        nextButton: '.swiper-button-next',

@@ -46,4 +46,19 @@ h3 {font-size: 1.777em;}
 
 h4 {font-size: 1.333em;}
 
+p {
+	line-height: 1.1;
+	font-size: 1em;
+	padding: 12px 0;
+	color: $colorThree;
+}
+
+p.large {
+	font-size: 1.6em;
+}
+
+.bold {
+	font-weight: 600;
+}
+
 small, .font_small {font-size: 0.75em;}

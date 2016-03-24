@@ -57,6 +57,18 @@ h3 {
 h4 {
   font-size: 1.333em; }
 
+p {
+  line-height: 1.1;
+  font-size: 1em;
+  padding: 12px 0;
+  color: #26173b; }
+
+p.large {
+  font-size: 1.6em; }
+
+.bold {
+  font-weight: 600; }
+
 small, .font_small {
   font-size: 0.75em; }
 
@@ -819,5 +831,72 @@ header {
     background-size: 100% 100%;
     background-position: 0 0;
     height: 420px; }
+
+.results {
+  width: 100%;
+  background: #efefef;
+  padding: 25px 0;
+  height: auto;
+  overflow: auto; }
+  .results h4 {
+    text-transform: uppercase;
+    color: #8dbf21;
+    letter-spacing: 1px;
+    font-size: 1em; }
+  .results h5 {
+    font-weight: 200;
+    padding-right: 50px;
+    border-right: 1px solid #a1a1a1;
+    color: #a1a1a1; }
+  .results .col-3:last-child h5 {
+    border-right: 0px; }
+
+.description {
+  padding: 40px 0; }
+
+.discovery-item {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #26173b;
+  position: relative; }
+  .discovery-item:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 60%; }
+  .discovery-item > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .discovery-item.red {
+    border-top: 7px solid #e14545; }
+  .discovery-item.blue {
+    border-top: 7px solid #3aacdd; }
+  .discovery-item.green {
+    border-top: 7px solid #8dbf21; }
+  .discovery-item h3 {
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .discovery-item p {
+    position: absolute;
+    bottom: 25px;
+    color: #fff;
+    left: 25px; }
+    .discovery-item p:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      background: red;
+      bottom: 10px;
+      left: 130px; }
 
 /*# sourceMappingURL=style.css.map */

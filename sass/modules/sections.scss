@@ -18,3 +18,81 @@
 		height: 420px;
 	}
 }
+
+.results {
+	width: 100%;
+	background: $colorBg;
+	padding: 25px 0;
+	height: auto;
+	overflow: auto;
+
+	h4 {
+		text-transform: uppercase;
+		color: $colorOne;
+		letter-spacing: 1px;
+		font-size: 1em;
+	}
+
+	h5 {
+		font-weight: 200;
+		padding-right: 50px;
+		border-right: 1px solid $colorTypeLight;
+		color: $colorTypeLight;
+	}
+
+	.col-3:last-child h5 {
+		border-right: 0px;
+	}
+}
+
+.description {
+	padding: 40px 0;
+}
+
+.discovery-item {
+	width: 100%;
+	display: block;
+	@include aspect-ratio(10, 6);
+	background: $colorThree;
+	position: relative;
+
+	&.red {
+		border-top: 7px solid $colorFour;
+	}
+
+	&.blue {
+		border-top: 7px solid $colorFive;
+	}
+
+	&.green {
+		border-top: 7px solid $colorOne;
+	}
+
+	h3 {
+		color: #fff;
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	p {
+		position: absolute;
+		bottom: 25px;
+		color: #fff;
+		left: 25px;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 20px;
+			background:red;
+			bottom: 10px;
+			left: 130px;
+		}
+	}
+}
+
