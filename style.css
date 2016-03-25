@@ -892,10 +892,30 @@ header {
 
 .description {
   padding: 40px 0; }
+  .description h3 {
+    font-weight: 600;
+    color: #26173b;
+    font-size: 2em;
+    line-height: 1.15em; }
   .description img {
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 25px;
     width: 100%;
     height: auto; }
+  .description h4 {
+    color: #8dbf21;
+    font-size: 1.2em;
+    margin: 0.5em 0; }
+  .description p, .description li, .description h5 {
+    font-weight: 200;
+    color: #26173b;
+    font-size: 1.2em;
+    line-height: 1.4em; }
+  .description ul {
+    padding-top: 0.5em; }
+  .description h5 {
+    font-weight: 400;
+    color: #8dbf21; }
 
 .discovery {
   padding: 0 0 40px 0; }
@@ -1036,7 +1056,21 @@ header {
     top: 25%;
     width: 40%;
     left: 50px;
-    font-size: 2.2em; }
+    font-weight: 600; }
+  .discovery-sub-item h1 {
+    color: #8dbf21;
+    position: absolute;
+    top: 43%;
+    width: 40%;
+    left: 50px;
+    font-weight: 600; }
+  .discovery-sub-item h3 {
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 27%;
+    width: 40%;
+    left: 50px; }
   .discovery-sub-item img {
     position: absolute;
     right: 20%;
@@ -1050,10 +1084,69 @@ header {
   .discovery-sub-item:hover {
     background-position: -300px -110px; }
 
+.discovery-sub-item-two {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer; }
+  .discovery-sub-item-two:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 27.27273%; }
+  .discovery-sub-item-two > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .discovery-sub-item-two .diagonal {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/svg/diagonal-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 280% 280%;
+    background-position: -2250px -280px;
+    -webkit-transition: all 0.39s ease-in-out;
+    -moz-transition: all 0.39s ease-in-out;
+    -ms-transition: all 0.39s ease-in-out;
+    -o-transition: all 0.39s ease-in-out;
+    transition: all 0.39s ease-in-out; }
+  .discovery-sub-item-two h2 {
+    color: #8dbf21;
+    position: absolute;
+    top: 50px;
+    width: 40%;
+    left: 50px;
+    font-weight: 600;
+    z-index: 8; }
+  .discovery-sub-item-two h3 {
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 36%;
+    width: 40%;
+    left: 50px;
+    z-index: 8; }
+  .discovery-sub-item-two img {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 70%;
+    height: auto;
+    z-index: 1; }
+  .discovery-sub-item-two:hover .diagonal {
+    background-position: -1000px -280px; }
+
 .page-nav {
-  padding: 40px 0 0 0;
-  height: auto;
-  overflow: auto; }
+  padding: 40px 0 0 0; }
   .page-nav a {
     color: #a1a1a1;
     text-decoration: none;
@@ -1149,22 +1242,30 @@ header {
 .approach .logo {
   padding: 0 70px 70px 70px; }
 
-.service-profile .cta .link-btn-one {
+.service-profile .cta .link-btn-one, .case-studies .cta .link-btn-one, .results .cta .link-btn-one, .case-study-profile .cta .link-btn-one {
   position: relative;
   width: 100%; }
-  .service-profile .cta .link-btn-one:before {
+  .service-profile .cta .link-btn-one:before, .case-studies .cta .link-btn-one:before, .results .cta .link-btn-one:before, .case-study-profile .cta .link-btn-one:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 18.75%; }
-  .service-profile .cta .link-btn-one > .content {
+  .service-profile .cta .link-btn-one > .content, .case-studies .cta .link-btn-one > .content, .results .cta .link-btn-one > .content, .case-study-profile .cta .link-btn-one > .content {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0; }
-  .service-profile .cta .link-btn-one img {
+  .service-profile .cta .link-btn-one img, .case-studies .cta .link-btn-one img, .results .cta .link-btn-one img, .case-study-profile .cta .link-btn-one img {
     width: 15%;
     top: 7%; }
+
+.results {
+  padding: 0; }
+  .results .discovery-sub h2 {
+    top: 45%; }
+
+.case-studies .page-nav {
+  background: #efefef; }
 
 /*# sourceMappingURL=style.css.map */

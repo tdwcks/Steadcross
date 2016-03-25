@@ -57,7 +57,7 @@
 	}
 }
 
-.service-profile {
+.service-profile, .case-studies, .results, .case-study-profile {
 	.cta .link-btn-one {
 		@include aspect-ratio(16, 3);
 		width: 100%;
@@ -66,5 +66,19 @@
 			width: 15%;
 			top: 7%;
 		}
+	}
+}
+
+.results {
+	padding: 0;
+
+	.discovery-sub h2 {
+		top: 45%;
+	}
+}
+
+.case-studies {
+	.page-nav {
+		background: $colorBg;
 	}
 }

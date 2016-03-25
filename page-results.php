@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<article class="services">
-		<section class="header red">
+	<article class="results">
+		<section class="header green">
 			<div class="grid-container">
 				<div class="row">
 					<h1>Our <?php the_title();?></h1>
@@ -19,17 +19,20 @@
 		</section>
 		<section class="discovery-sub">
 			<div class="grid-container">
-			<?php query_posts(array('post_parent' => $post->ID, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
 				<div class="row">
-					<a class="discovery-sub-item">
-						<h2><?php the_title(); ?></h2>
-						<?php the_post_thumbnail(); ?>
+					<a href="<?php echo get_site_url(); ?>/case-studies" class="discovery-sub-item">
+						<h3>View Our</h3>
+						<h1>Case Studies</h1>
 						<img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right-green.svg">
 					</a>
 				</div>
-			<?php }  
-			 wp_reset_query(); 
-			?>
+				<div class="row">
+					<a href="<?php echo get_site_url(); ?>/testimonials" class="discovery-sub-item">
+						<h3>View Our</h3>
+						<h1>Testimonials</h1>
+						<img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right-green.svg">
+					</a>
+				</div>
 			</div>
 		</section>
 		<section class="cta">

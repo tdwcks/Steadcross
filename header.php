@@ -50,15 +50,15 @@
 					<div class="row">
 						<div class="col-8">
 							<ul>
-								<li><a href="/about">About Us</a></li>
-								<li><a href="">Services</a></li>
-								<li><a class="result" href="">Results</a></li>
+								<li><a href="<?php echo get_site_url(); ?>/about">About Us</a></li>
+								<li><a href="<?php echo get_site_url(); ?>/services">Services</a></li>
+								<li><a class="result" href="<?php echo get_site_url(); ?>/results">Results</a></li>
 									<ul class="submenu result-dd">
-										<li><a href="">Case Studies</a></li>
-										<li><a href="">Testimonials</a></li>
+										<li><a href="<?php echo get_site_url(); ?>/case-studies">Case Studies</a></li>
+										<li><a href="<?php echo get_site_url(); ?>/testimonials">Testimonials</a></li>
 									</ul>
-								<li><a href="">Updates</a></li>
-								<li><a href="">Contact</a></li>
+								<li><a href="<?php echo get_site_url(); ?>/updates">Updates</a></li>
+								<li><a href="<?php echo get_site_url(); ?>/contact">Contact</a></li>
 							</ul>
 						</div>
 						<div class="col-3">
