@@ -797,15 +797,7 @@ header {
   overflow: auto;
   padding: 35px 0 0 0;
   background: #fff; }
-  header h1 {
-    text-indent: -9999999px;
-    width: 100%;
-    height: auto;
-    overflow: auto;
-    background: url(img/logo.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 0 0;
+  header img {
     margin-bottom: 35px; }
   header .col-3 {
     float: right; }
@@ -896,7 +888,8 @@ header {
     font-weight: 600;
     color: #26173b;
     font-size: 2em;
-    line-height: 1.15em; }
+    line-height: 1.15em;
+    margin-bottom: 0.5em; }
   .description img {
     margin-top: 40px;
     margin-bottom: 25px;
@@ -1177,6 +1170,66 @@ header {
     float: right;
     padding-top: 100px; }
 
+.blog-post {
+  display: block;
+  padding: 40px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #a1a1a1;
+  height: auto;
+  width: 100%; }
+  .blog-post h3 {
+    float: left;
+    color: #8dbf21; }
+  .blog-post h5 {
+    float: right;
+    margin-top: 7px;
+    width: intrinsic;
+    padding: 3px 20px 6px 20px;
+    background: #26173b;
+    color: #fff;
+    font-size: 1em;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .blog-post p {
+    width: 100%;
+    clear: both;
+    display: block; }
+  .blog-post:last-child {
+    border-bottom: 0; }
+  .blog-post:hover h5 {
+    background: #8dbf21; }
+
+.contact-block {
+  background: #e5e5e5;
+  margin-bottom: 40px;
+  padding: 0; }
+  .contact-block h4 {
+    padding-top: 1.5em;
+    color: #8dbf21;
+    font-weight: 600;
+    font-size: 1em;
+    padding-bottom: 0.3em; }
+  .contact-block h4:first-child {
+    margin-top: 30px; }
+  .contact-block img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0; }
+  .contact-block p {
+    font-weight: 300;
+    line-height: 1.3em; }
+  .contact-block a {
+    font-weight: 300;
+    color: #26173b;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #8dbf21;
+    text-decoration: none;
+    display: inline-block; }
+
 .link-btn-one {
   position: relative;
   width: 100%;
@@ -1242,30 +1295,33 @@ header {
 .approach .logo {
   padding: 0 70px 70px 70px; }
 
-.service-profile .cta .link-btn-one, .case-studies .cta .link-btn-one, .results .cta .link-btn-one, .case-study-profile .cta .link-btn-one {
+.service-profile .cta .link-btn-one, .services .cta .link-btn-one, .case-studies .cta .link-btn-one, .page-results .cta .link-btn-one, .case-study-profile .cta .link-btn-one, .updates .cta .link-btn-one {
   position: relative;
   width: 100%; }
-  .service-profile .cta .link-btn-one:before, .case-studies .cta .link-btn-one:before, .results .cta .link-btn-one:before, .case-study-profile .cta .link-btn-one:before {
+  .service-profile .cta .link-btn-one:before, .services .cta .link-btn-one:before, .case-studies .cta .link-btn-one:before, .page-results .cta .link-btn-one:before, .case-study-profile .cta .link-btn-one:before, .updates .cta .link-btn-one:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 18.75%; }
-  .service-profile .cta .link-btn-one > .content, .case-studies .cta .link-btn-one > .content, .results .cta .link-btn-one > .content, .case-study-profile .cta .link-btn-one > .content {
+  .service-profile .cta .link-btn-one > .content, .services .cta .link-btn-one > .content, .case-studies .cta .link-btn-one > .content, .page-results .cta .link-btn-one > .content, .case-study-profile .cta .link-btn-one > .content, .updates .cta .link-btn-one > .content {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0; }
-  .service-profile .cta .link-btn-one img, .case-studies .cta .link-btn-one img, .results .cta .link-btn-one img, .case-study-profile .cta .link-btn-one img {
+  .service-profile .cta .link-btn-one img, .services .cta .link-btn-one img, .case-studies .cta .link-btn-one img, .page-results .cta .link-btn-one img, .case-study-profile .cta .link-btn-one img, .updates .cta .link-btn-one img {
     width: 15%;
     top: 7%; }
 
-.results {
+.page-results {
   padding: 0; }
-  .results .discovery-sub h2 {
+  .page-results .discovery-sub h2 {
     top: 45%; }
 
 .case-studies .page-nav {
   background: #efefef; }
+
+.updates .description .col-4 {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

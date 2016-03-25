@@ -38,7 +38,7 @@
 			<div class="grid-container">
 				<div class="row">
 					<div class="col-4">
-						<h1 class="logo">SteadCross</h1>
+						<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg"></a>
 					</div>
 					<div class="col-3">
 						<h4>Making big business for small businesses</h4>

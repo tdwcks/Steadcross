@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<article class="results">
+	<article class="page-results">
 		<section class="header green">
 			<div class="grid-container">
 				<div class="row">
