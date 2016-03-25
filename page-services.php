@@ -21,7 +21,7 @@
 			<div class="grid-container">
 			<?php query_posts(array('post_parent' => $post->ID, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
 				<div class="row">
-					<a class="discovery-sub-item">
+					<a href="<?php echo get_permalink(); ?>" class="discovery-sub-item">
 						<h2><?php the_title(); ?></h2>
 						<?php the_post_thumbnail(); ?>
 						<img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right-green.svg">

@@ -19,3 +19,6 @@ html {
 .hidden {
 	display: none;
 }
+
+::-moz-selection { background: $colorOne; color: #fff; }
+::selection { background: $colorOne; color: #fff; }

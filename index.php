@@ -10,7 +10,10 @@
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
 					            		<h3>New Business in 3 months</h3>
-					            		<a href="">View Case Study</a>
+					            		<a href="<?php echo get_site_url(); ?>/results/case-studies/aye-creative/">View Case Study</a>
+				            		</div>
+				            		<div class="col-6">
+				            			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/graphics/logo-mask.png">
 				            		</div>
 				            	</div>
 				            </div>
@@ -22,7 +25,10 @@
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
 					            		<h3>New Business in 3 months</h3>
-					            		<a href="">View Case Study</a>
+					            		<a href="<?php echo get_site_url(); ?>/results/case-studies/aye-creative/">View Case Study</a>
+				            		</div>
+				            		<div class="col-6">
+				            			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/graphics/logo-mask.png">
 				            		</div>
 				            	</div>
 				            </div>
@@ -34,7 +40,25 @@
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
 					            		<h3>New Business in 3 months</h3>
-					            		<a href="">View Case Study</a>
+					            		<a href="<?php echo get_site_url(); ?>/results/case-studies/aye-creative/">View Case Study</a>
+				            		</div>
+				            		<div class="col-6">
+				            			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/graphics/logo-mask.png">
+				            		</div>
+				            	</div>
+				            </div>
+			            </div>
+			            <div class="swiper-slide">
+			            	<div class="grid-container">
+				            	<div class="row">
+				            		<div class="col-4">
+					            		<h5>Helping our clients win</h5>
+					            		<h1>450k</h1>
+					            		<h3>New Business in 3 months</h3>
+					            		<a href="<?php echo get_site_url(); ?>/results/case-studies/aye-creative/">View Case Study</a>
+				            		</div>
+				            		<div class="col-6">
+				            			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/graphics/logo-mask.png">
 				            		</div>
 				            	</div>
 				            </div>
@@ -83,19 +107,19 @@
 			<div class="grid-container">
 				<div class="row">
 					<div class="col-4">
-						<a class="discovery-item red" href="">
+						<a class="discovery-item red" href="<?php echo get_site_url(); ?>/services">
 							<h3>Services</h3>
 							<p>Find out more</p>
 						</a>
 					</div>
 					<div class="col-4">
-						<a class="discovery-item green" href="">
+						<a class="discovery-item green" href="<?php echo get_site_url(); ?>/results">
 							<h3>Results</h3>
 							<p>Find out more</p>
 						</a>
 					</div>
 					<div class="col-4">
-						<a class="discovery-item blue" href="">
+						<a class="discovery-item blue" href="<?php echo get_site_url(); ?>/why">
 							<h3>Why Us?</h3>
 							<p>Find out more</p>
 						</a>

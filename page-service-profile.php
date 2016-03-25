@@ -12,8 +12,8 @@
 		<section class="page-nav">
 			<div class="grid-container">
 				<div class="row">
-					<a class="base" href="/services">Services</a>
-					<a class="current-page" href="/services"><?php the_title();?></a>
+					<a class="base" href="<?php echo get_site_url(); ?>/services">Services</a>
+					<a class="current-page" href="#"><?php the_title();?></a>
 				</div>
 			</div>
 		</section>
