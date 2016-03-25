@@ -9,7 +9,7 @@
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
-					            		<h3>New Business in 30 months</h3>
+					            		<h3>New Business in 3 months</h3>
 					            		<a href="">View Case Study</a>
 				            		</div>
 				            	</div>
@@ -21,7 +21,7 @@
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
-					            		<h3>New Business in 30 months</h3>
+					            		<h3>New Business in 3 months</h3>
 					            		<a href="">View Case Study</a>
 				            		</div>
 				            	</div>
@@ -33,7 +33,7 @@
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
-					            		<h3>New Business in 30 months</h3>
+					            		<h3>New Business in 3 months</h3>
 					            		<a href="">View Case Study</a>
 				            		</div>
 				            	</div>
@@ -41,9 +41,11 @@
 			            </div>
 			        </div>  
 		        </div>
-		        <div class="swiper-pagination"></div>
-		        <div class="swiper-button-next"></div>
-		        <div class="swiper-button-prev"></div>
+		        <div class="swiper-controls">
+			        <div class="swiper-pagination"></div>
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+			    </div>
 		    </div>
 		</section>
 		<section class="results">

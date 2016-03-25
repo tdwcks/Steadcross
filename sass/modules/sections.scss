@@ -8,14 +8,82 @@
 	background: $colorThree;
 	height: auto;
 	overflow: auto;
+	position: relative;
 
 	.swiper-slide {
 		background-color: $colorThree;
-		background-image: url('img/slider/slider-bg-1.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: 0 0;
-		height: 420px;
+		height: 450px;
+		padding: 0;
+
+		h5 {
+			color: $colorOne;
+			text-transform: uppercase;
+			font-weight: 600;
+			text-align: left;
+			line-height: 1em;
+			font-size: 1em;
+			padding-top: 0;
+		}
+
+		h1 {
+			color: #fff;
+			text-align: left;
+			font-size: 6.5em;
+			font-weight: 700;
+			line-height: 1em;
+		}
+
+		h3 {
+			color: #fff;
+			text-align: left;
+			font-size: 2.7em;
+			line-height: 1em;
+			font-weight: 600;
+		}
+
+		a {
+			color: $colorOne;
+			text-decoration: none;
+			text-align: left;
+			display: block;
+			padding-top: 25px;
+			font-size: 1.1em;
+		}
+	}
+
+	.swiper-controls {
+		width: intrinsic;
+		display: block;
+		margin: 0px auto;
+		width: 200px;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		margin-left: -100px;
+
+		.swiper-pagination, .swiper-button-next, .swiper-button-prev {
+			position: relative;
+		}
+
+		.swiper-button-prev {
+			float: left;
+		}
+
+		.swiper-button-next {
+			float: right;
+		}
+
+		.swiper-pagination {
+			display: block;
+			padding-top: 10px;
+
+			span {
+				margin: 0 5px;
+			}
+		}
 	}
 }
 
@@ -96,17 +164,30 @@
 	@include aspect-ratio(10, 6);
 	background: $colorThree;
 	position: relative;
+	@include transition(all, .2s, ease-in-out);
 
 	&.red {
 		border-top: 7px solid $colorFour;
+
+		&:hover {
+			background: $colorFour;
+		}
 	}
 
 	&.blue {
 		border-top: 7px solid $colorFive;
+
+		&:hover {
+			background: $colorFive;
+		}
 	}
 
 	&.green {
 		border-top: 7px solid $colorOne;
+
+		&:hover {
+			background: $colorOne;
+		}
 	}
 
 	h3 {
