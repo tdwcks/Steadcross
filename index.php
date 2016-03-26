@@ -9,7 +9,7 @@
 				            		<div class="col-4">
 					            		<h5>Helping our clients win</h5>
 					            		<h1>450k</h1>
-					            		<h3>New Business in 3 months</h3>
+					            		<h3>New Business </br> in 3 months</h3>
 					            		<a href="<?php echo get_site_url(); ?>/results/case-studies/aye-creative/">View Case Study</a>
 				            		</div>
 				            		<div class="col-6">

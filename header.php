@@ -43,23 +43,15 @@
 					<div class="col-3">
 						<h4>Making big business for small businesses</h4>
 					</div>
+					<a href="" class="menu-trigger"></a>
+					<a href="" class="menu-cross"></a>
 				</div>
 			</div>
 			<nav>
 				<div class="grid-container">
 					<div class="row">
 						<div class="col-8">
-							<ul>
-								<li><a href="<?php echo get_site_url(); ?>/about">About Us</a></li>
-								<li><a href="<?php echo get_site_url(); ?>/services">Services</a></li>
-								<li><a class="result" href="<?php echo get_site_url(); ?>/results">Results</a></li>
-									<ul class="submenu result-dd">
-										<li><a href="<?php echo get_site_url(); ?>/case-studies">Case Studies</a></li>
-										<li><a href="<?php echo get_site_url(); ?>/testimonials">Testimonials</a></li>
-									</ul>
-								<li><a href="<?php echo get_site_url(); ?>/updates">Updates</a></li>
-								<li><a href="<?php echo get_site_url(); ?>/contact">Contact</a></li>
-							</ul>
+							<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 						</div>
 						<div class="col-3">
 							<a class="telephone" href="tel:+44 (0) 1484 294490">+44 (0) 1484 294490</a>

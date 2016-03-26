@@ -209,6 +209,26 @@ html {
 .shift-12 {
   margin-left: 100%; }
 
+@-webkit-keyframes fade-down {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-down {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fade-down {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-down {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /**
  * Swiper 3.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -539,13 +559,20 @@ footer {
       padding-top: 5px; }
   footer .col-2 {
     display: none; }
+  @media (max-width: 760px) {
+    footer {
+      padding: 30px 0; }
+      footer .col-3 {
+        float: right;
+        width: 60%; } }
 
 header {
   width: 100%;
   height: auto;
-  overflow: auto;
+  overflow: visible;
   padding: 35px 0 0 0;
-  background: #fff; }
+  background: #fff;
+  z-index: 10; }
   header img {
     margin-bottom: 35px; }
   header .col-3 {
@@ -563,18 +590,11 @@ header {
     background-image: -moz-linear-gradient(90deg, #8dbf21, #55b030);
     background-image: -webkit-linear-gradient(90deg, #8dbf21, #55b030);
     background-image: linear-gradient(90deg, #8dbf21, #55b030);
+    overflow: visible;
+    position: relative;
     z-index: 10; }
     header nav ul li {
       float: left; }
-    header nav ul ul.submenu {
-      position: absolute;
-      display: none;
-      opacity: 0;
-      left: 0;
-      margin-top: 51px;
-      z-index: 50; }
-      header nav ul ul.submenu a {
-        color: #a1a1a1; }
     header nav a {
       display: block;
       font-size: 0.9em;
@@ -583,21 +603,162 @@ header {
       text-transform: uppercase;
       color: #fff;
       text-decoration: none; }
+      header nav a:hover {
+        background: #55b030; }
+    header nav ul li ul {
+      position: absolute;
+      left: 0;
+      top: 52px;
+      z-index: -1;
+      width: 100%;
+      background: #efefef;
+      display: none;
+      -webkit-animation: fade-down 0.2s ease-in-out;
+      -moz-animation: fade-down 0.2s ease-in-out;
+      -o-animation: fade-down 0.2s ease-in-out;
+      animation: fade-down 0.2s ease-in-out; }
+      header nav ul li ul li {
+        position: relative; }
+      header nav ul li ul a {
+        color: #a1a1a1;
+        padding: 15px 18px;
+        font-weight: 400; }
+      header nav ul li ul a:hover {
+        color: #26173b;
+        background: 0; }
     header nav a.telephone {
       font-size: 1.1em;
       font-weight: 300;
       text-align: right;
       padding: 15px 0; }
+  header nav ul li.menu-item-has-children:hover > ul {
+    display: block; }
+  header .current-menu-item {
+    background: #55b030; }
+  header ul li ul li.current-menu-item {
+    background: 0;
+    color: #8dbf21; }
+  header a.menu-cross {
+    display: none; }
+  header a.menu-trigger, header a.menu-cross {
+    width: 60px;
+    height: 40px;
+    background: url("img/svg/cross.svg");
+    background-size: 150% 100%;
+    background-position: 0 0;
+    right: 10px;
+    position: absolute;
+    display: none; }
+  header a.menu-trigger {
+    z-index: 1; }
+  header a.menu-cross {
+    z-index: 100; }
   header .submenu-holder {
-    display: none;
-    position: relative;
-    z-index: 5;
+    position: absolute;
+    z-index: 3;
+    top: 200px;
     width: 100%;
-    height: 50px;
-    background: #efefef; }
+    height: 53px;
+    background: #efefef;
+    -webkit-animation: fade-down 0.2s ease-in-out;
+    -moz-animation: fade-down 0.2s ease-in-out;
+    -o-animation: fade-down 0.2s ease-in-out;
+    animation: fade-down 0.2s ease-in-out;
+    display: none; }
+    header .submenu-holder.active {
+      display: block; }
   @media (max-width: 1130px) {
     header .col-3 {
-      display: none; } }
+      display: block; }
+    header nav .col-3 {
+      display: block; } }
+  @media (max-width: 870px) {
+    header .col-3 {
+      display: block; }
+    header nav .col-3 {
+      display: none; }
+    header nav .col-8 {
+      width: 100%; } }
+  @media (max-width: 760px) {
+    header {
+      padding-top: 25px; }
+      header img {
+        margin-bottom: 20px; }
+      header .col-4 {
+        width: 50%; }
+      header .submenu-holder.active {
+        display: none; }
+      header a.menu-trigger, header a.menu-cross {
+        display: block; }
+      header .current-menu-item {
+        background: 0;
+        color: #26173b; }
+      header ul li ul li.current-menu-item {
+        background: 0;
+        color: #26173b; }
+      header nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: auto;
+        padding: 27px;
+        background-image: -o-linear-gradient(90deg, #8dbf21, #55b030);
+        background-image: -moz-linear-gradient(90deg, #8dbf21, #55b030);
+        background-image: -webkit-linear-gradient(90deg, #8dbf21, #55b030);
+        background-image: linear-gradient(90deg, #8dbf21, #55b030); }
+        header nav:after {
+          content: "Menu";
+          display: block;
+          position: absolute;
+          top: 45px;
+          left: 42px;
+          font-size: 1.1em;
+          color: #26173b;
+          font-weight: 600;
+          text-transform: uppercase; }
+        header nav ul {
+          margin-top: 70px; }
+        header nav ul li {
+          clear: both;
+          position: relative; }
+        header nav ul li a {
+          padding: 8px 0;
+          font-weight: 700;
+          font-size: 1.1em; }
+        header nav ul li ul {
+          margin-top: 0; }
+        header nav ul li.menu-item-has-children a:after {
+          width: 15px;
+          height: 15px;
+          width: 0;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid white;
+          display: block;
+          content: "";
+          position: absolute;
+          left: 100px;
+          top: 15px; }
+        header nav ul li.menu-item-has-children ul li a:after {
+          display: none; }
+        header nav ul li a:hover {
+          background: 0; }
+        header nav ul li ul {
+          position: relative;
+          top: 0; }
+        header nav ul li ul li a {
+          color: #fff;
+          font-weight: 700;
+          padding: 8px 0; }
+      header .col-3 {
+        display: none; }
+      header nav .col-8 {
+        width: 100%; } }
+  @media (max-width: 595px) {
+    header .logo {
+      margin-bottom: 0; } }
 
 .slider {
   width: 100%;
@@ -678,6 +839,49 @@ header {
       padding-top: 10px; }
       .slider .swiper-controls .swiper-pagination span {
         margin: 0 5px; }
+  @media (max-width: 1130px) {
+    .slider .col-4 {
+      width: 38%; }
+      .slider .col-4 h5 {
+        padding-top: 0; } }
+  @media (max-width: 870px) {
+    .slider .col-4 {
+      width: 50%;
+      padding-top: 0px; }
+    .slider .col-6 {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 55%; }
+    .slider .swiper-button-next, .slider .swiper-button-prev {
+      display: none; } }
+  @media (max-width: 760px) {
+    .slider .slider {
+      box-sizing: border-box;
+      padding: 0; }
+    .slider .col-4 {
+      width: 70%;
+      position: relative;
+      z-index: 5; }
+      .slider .col-4 h5 {
+        font-size: 0.7em;
+        padding-top: 0; }
+      .slider .col-4 h1 {
+        font-size: 4em;
+        margin-bottom: 5px; }
+      .slider .col-4 h3 {
+        font-size: 1.5em; }
+      .slider .col-4 a {
+        margin-top: 0; }
+    .slider .col-6 {
+      top: 60px;
+      right: -130px;
+      width: 90%;
+      z-index: 1; }
+    .slider .swiper-controls {
+      display: none; }
+    .slider .swiper-slide {
+      height: 250px; } }
 
 .results {
   width: 100%;
@@ -689,6 +893,8 @@ header {
     text-transform: uppercase;
     color: #8dbf21;
     letter-spacing: 1px;
+    display: block;
+    margin-top: 3px;
     font-size: 1em; }
   .results h5 {
     font-weight: 200;
@@ -697,9 +903,21 @@ header {
     color: #a1a1a1; }
   .results .col-3:last-child h5 {
     border-right: 0px; }
+  @media (max-width: 870px) {
+    .results .col-3 {
+      width: 30.66667%;
+      box-sizing: border-box; }
+      .results .col-3:last-child {
+        display: none; }
+    .results .col-3:nth-child(3) {
+      margin-right: 0; } }
+  @media (max-width: 760px) {
+    .results {
+      display: none; } }
 
 .description {
-  padding: 40px 0; }
+  padding: 40px 0;
+  box-sizing: border-box; }
   .description h3 {
     font-weight: 600;
     color: #26173b;
@@ -729,9 +947,58 @@ header {
   .description h5 {
     font-weight: 400;
     color: #8dbf21; }
+  @media (max-width: 1130px) {
+    .description .col-8 {
+      width: 82.66667%; }
+    .description p.large {
+      font-size: 1.5em; } }
+  @media (max-width: 870px) {
+    .description .col-8 {
+      width: 100%; }
+    .description p.large {
+      font-size: 1.4em; } }
+  @media (max-width: 760px) {
+    .description {
+      padding: 12px 0; }
+      .description p.large {
+        font-size: 1.1em; } }
 
 .discovery {
   padding: 0 0 40px 0; }
+  @media (max-width: 870px) {
+    .discovery .col-4 {
+      width: 100%; }
+      .discovery .col-4:last-child .discovery-item {
+        margin-bottom: 0; }
+    .discovery .discovery-item {
+      position: relative;
+      margin-bottom: 40px; }
+      .discovery .discovery-item:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 25%; }
+      .discovery .discovery-item > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
+  @media (max-width: 760px) {
+    .discovery .discovery-item {
+      position: relative;
+      margin-bottom: 25px; }
+      .discovery .discovery-item:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 43.75%; }
+      .discovery .discovery-item > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
 
 .discovery-item {
   width: 100%;

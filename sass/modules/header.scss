@@ -6,9 +6,10 @@
 header {
 	width: 100%;
 	height: auto;
-	overflow: auto;
+	overflow: visible;
 	padding: 35px 0 0 0;
 	background: #fff;
+	z-index: 10;
 
 	img {
 		margin-bottom: 35px;
@@ -30,23 +31,12 @@ header {
 
 	nav {
 		@include linear-gradient-b(90deg, $colorOne, $colorTwo);
+		overflow: visible;
+		position: relative;
 		z-index: 10;
 
 		ul li {
 			float: left;
-		}
-
-		ul ul.submenu {
-			position: absolute;
-			display: none;
-			opacity: 0;
-			left: 0;
-			margin-top: 51px;
-			z-index: 50;
-
-			a {
-				color: $colorTypeLight;
-			}
 		}
 
 		a {
@@ -57,6 +47,37 @@ header {
 			text-transform: uppercase;
 			color: #fff;
 			text-decoration: none;
+
+			&:hover {
+				background: $colorTwo;
+			}
+		}
+
+		ul li ul {
+			position: absolute;
+			left: 0;
+			top: 52px;
+			z-index: -1;
+			width: 100%;
+			background: $colorBg;
+			display: none;
+			@include animation(fade-down 0.2s ease-in-out);
+
+			li {
+				position: relative;
+				
+			}
+
+			a {
+				color: $colorTypeLight;
+				padding: 15px 18px;
+				font-weight: 400;
+			}
+
+			a:hover {
+				color: $colorThree;
+				background: 0;
+			}
 		}
 
 		a.telephone {
@@ -67,18 +88,198 @@ header {
 		}
 	}
 
-	.submenu-holder {
+	nav ul li.menu-item-has-children:hover > ul {
+		display: block;
+	}
+
+	.current-menu-item {
+		background: $colorTwo;
+	}
+
+	ul li ul li.current-menu-item {
+		background: 0;
+		color: $colorOne;
+	}
+
+	a.menu-cross {
 		display: none;
-		position: relative;
-		z-index: 5;
+	}
+
+	a.menu-trigger, a.menu-cross {
+		width: 60px;
+		height: 40px;
+		background: url('img/svg/cross.svg');
+		background-size: 150% 100%;
+		background-position: 0 0;
+		right: 10px;
+		position: absolute;
+		display: none;
+	}
+
+	a.menu-trigger {
+		z-index: 1;
+	}
+
+	a.menu-cross {
+		z-index: 100;
+	}
+
+	.submenu-holder {
+		position: absolute;
+		z-index: 3;
+		top: 200px;
 		width: 100%;
-		height: 50px;
+		height: 53px;
 		background: $colorBg;
+		@include animation(fade-down 0.2s ease-in-out);
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 
 	@include mq("medium", "max-width") {
 		.col-3 {
+			display: block;
+		}
+
+		nav .col-3 {
+			display: block;
+		}
+	}
+
+	@include mq("small", "max-width") {
+		.col-3 {
+			display: block;
+		}
+
+		nav .col-3 {
 			display: none;
+		}
+
+		nav .col-8 {
+			width: 100%;
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+		padding-top: 25px;
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		.col-4 {
+			width: 50%;
+		}
+
+		.submenu-holder.active {
+			display: none;
+		}
+
+		a.menu-trigger, a.menu-cross { 
+			display: block;
+		}
+
+		.current-menu-item {
+			background: 0;
+			color: $colorThree;
+		}
+
+		ul li ul li.current-menu-item {
+			background: 0;
+			color: $colorThree;
+		}
+
+		nav {
+			display: none; // Obviously needs removing
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 250px;
+			height: auto;
+			padding: 27px;
+			@include linear-gradient-b(90deg, $colorOne, $colorTwo);
+
+			&:after {
+				content: "Menu";
+				display: block;
+				position: absolute;
+				top: 45px;
+				left:  42px;
+				font-size: 1.1em;
+				color: $colorThree;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+
+			ul {
+				margin-top: 70px;
+			}
+
+			ul li {
+				clear: both;
+				position: relative;
+			}
+
+			ul li a {
+				padding: 8px 0;
+				font-weight: 700;
+				font-size: 1.1em;
+			}
+
+			ul li ul {
+				margin-top: 0;
+			}
+
+			ul li.menu-item-has-children a:after {
+				width: 15px;
+				height: 15px;
+				width: 0; 
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 6px solid white;
+				display: block;
+				content: "";
+				position: absolute;
+				left: 100px;
+				top: 15px;
+			}
+
+			ul li.menu-item-has-children ul li a:after {
+				display: none;
+			}
+
+			ul li a:hover {
+				background: 0;
+			}
+
+			ul li ul {
+				position: relative;
+				top: 0;
+			}
+
+			ul li ul li a {
+				color: #fff;
+				font-weight: 700;
+				padding: 8px 0;
+			}
+		}
+
+		.col-3 {
+			display: none;
+		}
+
+		nav .col-8 {
+			width: 100%;
+		}
+	}
+
+	@include mq("super-small", "max-width") {
+
+		.logo {
+			margin-bottom: 0;
 		}
 	}
 }

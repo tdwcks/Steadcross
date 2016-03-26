@@ -5,6 +5,8 @@
 // 		Mixins
 // =================================================================
 
+// Media Queries 
+
 $breakpoints: (
   "nano" 350px,
   "super-small" 595px,
@@ -26,6 +28,8 @@ $breakpoints: (
   }
 }
 
+// Transitions
+
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
@@ -34,12 +38,75 @@ $breakpoints: (
     transition: $transition-property $transition-time $method;
 }
 
-@mixin animation--fadedown($delay) {
-  @include animation(fade-in 0.5s ease-in-out);
-  @include animation-iteration-count(1);
-  @include animation-fill-mode(forwards);
-  @include animation-delay(#{$delay}s);
+// Animation 
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
 }
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+// border-radius
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -54,6 +121,8 @@ $breakpoints: (
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
+
+// Aspect Ratio
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
@@ -71,6 +140,8 @@ $breakpoints: (
     bottom: 0;
   }
 }
+
+// Linear Gradient
 
 @mixin linear-gradient-b($args...) {
  background-image: -o-linear-gradient($args); 
