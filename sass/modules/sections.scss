@@ -308,6 +308,10 @@
 		p.large {
 			font-size: 1.4em;
 		}
+
+		img {
+			display: none;
+		}
 	}
 
 	@include mq("extra-small", "max-width") { 
@@ -633,7 +637,7 @@
 	}
 
 	@include mq("medium", "max-width") {
-		background-position: -1150px -110px;
+		background-position: -1100px -100px;
 
 		h2 {
 			top: 18%;
@@ -643,16 +647,54 @@
 
 	@include mq("small", "max-width") {
 		background-position: -850px -70px;
+
+		h3 {
+			top: 25px;
+			font-size: 1.7em;
+		}
+
+		h1 {
+			font-size: 1.7em;
+			top: 50%;
+		}
 	}
 
 	@include mq("extra-small", "max-width") {
 		@include aspect-ratio(10, 2.5);
-		background-position: -550px -60px;
+		background-position: -570px -80px;
 		background-size: 250% 250%;
 
 		h2 {
 			font-size: 1em;
 			width: 50%;
+			left: 20px;
+		}
+
+		h3 {
+			top: 20px;
+			left: 25px;
+			font-size: 1em;
+		}
+
+		h1 {
+			font-size: 1em;
+			left: 25px;
+			top: 50%;
+		}
+	}
+
+	@include mq("super-small", "max-width") {
+		background-position: -490px -80px;
+		background-size: 300% 300%;
+
+		img {
+			top: 30%;
+		}
+
+
+		h2 {
+			font-size: 0.9em;
+			width: 55%;
 			left: 20px;
 		}
 	}
@@ -744,6 +786,21 @@
 			background-size: 100% 100%;
 		}
 	}
+
+	@include mq("small", "max-width") {
+		padding-top: 30px;
+	}
+
+	@include mq("extra-small", "max-width") {
+		padding-top: 20px;
+		font-size: 0.8em;
+
+		.base:after {
+			width: 15px;
+			height: 15px;
+			right: 5px;
+		}
+	}
 }
 
 .metric {
@@ -763,6 +820,40 @@
 	.col-6 {
 		float: right;
 		padding-top: 100px;
+	}
+
+	@include mq("medium", "max-width") {
+		.col-6 {
+			padding-top: 70px;
+		}
+	}
+
+	@include mq("small", "max-width") {
+		.col-6 {
+			padding-top: 50px;
+			h3 {
+				font-size: 1.4em;
+			}
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+		.col-6, .col-4 {
+			width: 100%;
+			padding: 0;
+		}
+
+		.col-4 {
+			padding: 0 50px;
+		}
+	}
+
+	@include mq("super-small", "max-width") {
+		.col-6 {
+			h3 {
+				font-size: 1.2em;
+			}
+		}
 	}
 }
 

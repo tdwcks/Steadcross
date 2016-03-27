@@ -958,7 +958,9 @@ header {
     .description .col-10 {
       width: 100%; }
     .description p.large {
-      font-size: 1.4em; } }
+      font-size: 1.4em; }
+    .description img {
+      display: none; } }
   @media (max-width: 760px) {
     .description {
       padding: 12px 0; }
@@ -1229,17 +1231,23 @@ header {
     background-color: #26173b; }
   @media (max-width: 1130px) {
     .discovery-sub-item {
-      background-position: -1150px -110px; }
+      background-position: -1100px -100px; }
       .discovery-sub-item h2 {
         top: 18%;
         width: 45%; } }
   @media (max-width: 870px) {
     .discovery-sub-item {
-      background-position: -850px -70px; } }
+      background-position: -850px -70px; }
+      .discovery-sub-item h3 {
+        top: 25px;
+        font-size: 1.7em; }
+      .discovery-sub-item h1 {
+        font-size: 1.7em;
+        top: 50%; } }
   @media (max-width: 760px) {
     .discovery-sub-item {
       position: relative;
-      background-position: -550px -60px;
+      background-position: -570px -80px;
       background-size: 250% 250%; }
       .discovery-sub-item:before {
         display: block;
@@ -1255,6 +1263,24 @@ header {
       .discovery-sub-item h2 {
         font-size: 1em;
         width: 50%;
+        left: 20px; }
+      .discovery-sub-item h3 {
+        top: 20px;
+        left: 25px;
+        font-size: 1em; }
+      .discovery-sub-item h1 {
+        font-size: 1em;
+        left: 25px;
+        top: 50%; } }
+  @media (max-width: 595px) {
+    .discovery-sub-item {
+      background-position: -490px -80px;
+      background-size: 300% 300%; }
+      .discovery-sub-item img {
+        top: 30%; }
+      .discovery-sub-item h2 {
+        font-size: 0.9em;
+        width: 55%;
         left: 20px; } }
 
 .discovery-sub-item-two {
@@ -1339,6 +1365,17 @@ header {
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: 100% 100%; }
+  @media (max-width: 870px) {
+    .page-nav {
+      padding-top: 30px; } }
+  @media (max-width: 760px) {
+    .page-nav {
+      padding-top: 20px;
+      font-size: 0.8em; }
+      .page-nav .base:after {
+        width: 15px;
+        height: 15px;
+        right: 5px; } }
 
 .metric {
   background: #efefef;
@@ -1352,6 +1389,23 @@ header {
   .metric .col-6 {
     float: right;
     padding-top: 100px; }
+  @media (max-width: 1130px) {
+    .metric .col-6 {
+      padding-top: 70px; } }
+  @media (max-width: 870px) {
+    .metric .col-6 {
+      padding-top: 50px; }
+      .metric .col-6 h3 {
+        font-size: 1.4em; } }
+  @media (max-width: 760px) {
+    .metric .col-6, .metric .col-4 {
+      width: 100%;
+      padding: 0; }
+    .metric .col-4 {
+      padding: 0 50px; } }
+  @media (max-width: 595px) {
+    .metric .col-6 h3 {
+      font-size: 1.2em; } }
 
 .blog-post {
   display: block;
