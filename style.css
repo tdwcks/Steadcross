@@ -1087,7 +1087,7 @@ header {
     .header {
       padding: 27px 0 30px 0; }
       .header h1 {
-        font-size: 1.777em; } }
+        font-size: 1.4em; } }
 
 .list {
   border-top: 7px solid #8dbf21;
@@ -1162,6 +1162,9 @@ header {
   height: auto;
   overflow: hidden;
   padding: 50px 0; }
+  @media (max-width: 870px) {
+    .discovery-sub {
+      padding: 30px 0; } }
 
 .discovery-sub-item {
   position: relative;
@@ -1224,6 +1227,35 @@ header {
     width: 15%; }
   .discovery-sub-item:hover {
     background-color: #26173b; }
+  @media (max-width: 1130px) {
+    .discovery-sub-item {
+      background-position: -1150px -110px; }
+      .discovery-sub-item h2 {
+        top: 18%;
+        width: 45%; } }
+  @media (max-width: 870px) {
+    .discovery-sub-item {
+      background-position: -850px -70px; } }
+  @media (max-width: 760px) {
+    .discovery-sub-item {
+      position: relative;
+      background-position: -550px -60px;
+      background-size: 250% 250%; }
+      .discovery-sub-item:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 25%; }
+      .discovery-sub-item > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+      .discovery-sub-item h2 {
+        font-size: 1em;
+        width: 50%;
+        left: 20px; } }
 
 .discovery-sub-item-two {
   position: relative;
@@ -1510,9 +1542,17 @@ header {
     padding-left: 0; }
   .why .list .row:nth-child(even) .col-8 {
     padding-right: 0px;
-    padding-left: 0; }
+    padding-left: 0; } }
+@media (max-width: 760px) {
   .why .cta .link-btn-one {
-    width: 100%; } }
+    width: 100%; }
+    .why .cta .link-btn-one h3 {
+      left: 25px; }
+  .why .cta .link-btn-one:nth-child(1) {
+    display: none; } }
+@media (max-width: 595px) {
+  .why .cta .link-btn-one h3 {
+    font-size: 1em; } }
 
 .service-profile .cta .link-btn-one, .services .cta .link-btn-one, .case-studies .cta .link-btn-one, .page-results .cta .link-btn-one, .case-study-profile .cta .link-btn-one, .updates .cta .link-btn-one, .approach .cta .link-btn-one {
   position: relative;
@@ -1545,9 +1585,9 @@ header {
       left: 0;
       right: 0;
       bottom: 0; }
-  .service-profile h3, .services h3, .case-studies h3, .page-results h3, .case-study-profile h3, .updates h3, .approach h3 {
-    left: 0;
-    width: 90%; } }
+    .service-profile .cta .link-btn-one h3, .services .cta .link-btn-one h3, .case-studies .cta .link-btn-one h3, .page-results .cta .link-btn-one h3, .case-study-profile .cta .link-btn-one h3, .updates .cta .link-btn-one h3, .approach .cta .link-btn-one h3 {
+      left: 0;
+      width: 50%; } }
 @media (max-width: 760px) {
   .service-profile .cta .link-btn-one, .services .cta .link-btn-one, .case-studies .cta .link-btn-one, .page-results .cta .link-btn-one, .case-study-profile .cta .link-btn-one, .updates .cta .link-btn-one, .approach .cta .link-btn-one {
     position: relative; }
@@ -1584,10 +1624,9 @@ header {
       right: 0;
       bottom: 0; }
     .service-profile .cta .link-btn-one h3, .services .cta .link-btn-one h3, .case-studies .cta .link-btn-one h3, .page-results .cta .link-btn-one h3, .case-study-profile .cta .link-btn-one h3, .updates .cta .link-btn-one h3, .approach .cta .link-btn-one h3 {
+      top: 20px;
       width: 70%;
-      font-size: 1.05em; }
-    .service-profile .cta .link-btn-one:nth-child(2), .services .cta .link-btn-one:nth-child(2), .case-studies .cta .link-btn-one:nth-child(2), .page-results .cta .link-btn-one:nth-child(2), .case-study-profile .cta .link-btn-one:nth-child(2), .updates .cta .link-btn-one:nth-child(2), .approach .cta .link-btn-one:nth-child(2) {
-      display: none; } }
+      font-size: 1em; } }
 
 .page-results {
   padding: 0; }

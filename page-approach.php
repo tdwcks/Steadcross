@@ -61,7 +61,7 @@
 			<div class="grid-container">
 				<div class="row">
 					<a href="#" class="link-btn-one">
-						<h3>Interested? Book a free coffee today</h3>
+						<h3>Interested? Book a </br> free coffee today</h3>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right.svg">
 					</a>
 				</div>

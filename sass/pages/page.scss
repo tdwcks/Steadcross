@@ -104,8 +104,26 @@
 			}
 		}
 
+		
+	}
+
+	@include mq("extra-small", "max-width") { 
 		.cta .link-btn-one {
 			width: 100%;
+
+			h3 {
+				left: 25px;
+			}
+		}
+
+		.cta .link-btn-one:nth-child(1) {
+			display: none;
+		}
+	}
+
+	@include mq("super-small", "max-width") { 
+		.cta .link-btn-one h3 {
+			font-size: 1em;
 		}
 	}
 }
@@ -125,12 +143,12 @@
 		
 		.cta .link-btn-one {
 			@include aspect-ratio(16, 3);
-		}
-
-		h3 {
-			left: 0;
-			width: 90%;
-		}
+		
+			h3 {
+				left: 0;
+				width: 50%;
+			}
+		}	
 	}
 
 	@include mq("extra-small", "max-width") {
@@ -155,11 +173,9 @@
 			@include aspect-ratio(16, 4.5);
 
 			h3 {
+				top: 20px;
 				width: 70%;
-				font-size: 1.05em;
-			}
-			&:nth-child(2) {
-				display: none;
+				font-size: 1em;
 			}
 		}
 	}
