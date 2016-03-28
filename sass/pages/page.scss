@@ -202,3 +202,14 @@
 		}
 	}
 }
+
+.case-study-profile {
+	.description {
+		@include mq("medium", "max-width") {
+			img {
+				display: block;
+			}
+			
+		}
+	}
+}
