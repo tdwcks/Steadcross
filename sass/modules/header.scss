@@ -13,17 +13,19 @@ header {
 
 	img {
 		margin-bottom: 35px;
+		margin-left: 16px;
 	}
 
 	.col-3 {
 		float: right;
+		margin-right: 0;
 
 		h4 {
 			color: $colorThree;
-			margin-top: 10px;
-			width: 175px;
+			margin-top: 18px;
+			padding-left: 75px;
 			float: right;
-			text-align: right;
+			text-align: left;
 			font-size: 1em;
 			font-weight: 300;
 		}
@@ -51,6 +53,10 @@ header {
 			&:hover {
 				background: $colorTwo;
 			}
+		}
+
+		.menu-item-type-custom {
+			display: none;
 		}
 
 		ul li ul {
@@ -131,7 +137,6 @@ header {
 		width: 100%;
 		height: 53px;
 		background: $colorBg;
-		@include animation(fade-down 0.2s ease-in-out);
 		display: none;
 
 		&.active {
@@ -144,14 +149,28 @@ header {
 			display: block;
 		}
 
+		.col-3 h4 {
+			padding-left: 18px;
+			margin-top: 3px;
+		}
+
 		nav .col-3 {
 			display: block;
+		}
+
+		.submenu-holder {
+			top: 180px;
 		}
 	}
 
 	@include mq("small", "max-width") {
 		.col-3 {
 			display: block;
+			width: 25%;
+		}
+
+		.col-3 h4 {
+			padding-left: 0px;
 		}
 
 		nav .col-3 {
@@ -161,6 +180,10 @@ header {
 		nav .col-8 {
 			width: 100%;
 		}
+
+		.submenu-holder {
+			top: 170px;
+		}
 	}
 
 	@include mq("extra-small", "max-width") {
@@ -168,6 +191,7 @@ header {
 
 		img {
 			margin-bottom: 20px;
+			margin-left: 0;
 		}
 
 		.col-4 {
@@ -192,8 +216,12 @@ header {
 			color: $colorThree;
 		}
 
+		a.menu-cross.active {
+			display: block;
+		}
+
 		nav {
-			display: none; // Obviously needs removing
+			display: none;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -247,12 +275,60 @@ header {
 				top: 15px;
 			}
 
+			ul li.menu-item-has-children ul.active {
+				display: block;
+			}
+
 			ul li.menu-item-has-children ul li a:after {
 				display: none;
 			}
 
 			ul li a:hover {
 				background: 0;
+			}
+
+			ul li ul {
+				z-index: 5;
+			}
+
+			.menu-item-100 {
+				padding-bottom: 10px;
+			}
+
+			.menu-item-type-custom {
+				display: block;
+				width: 100%;
+				font-weight: 200;
+				border-top: 1px solid #fff;
+				padding-top: 10px;
+
+				a {
+				 	font-weight: 200;
+				 	display: block;
+				 	font-size: 0.9em;
+				 	padding-left: 0;
+				}
+
+				a:before {
+					content: "";
+					display: block;
+					float: left;
+					background: red;
+					width: 15px;
+					height: 15px;
+					margin-right: 10px;
+				}
+			}
+
+			ul .menu-item-type-custom:last-child {
+				border-bottom: 1px solid #fff;
+				border-top: 0;
+				padding-top: 0;
+				padding-bottom: 10px;
+				
+				a:before {
+					background: blue;
+				}
 			}
 
 			ul li ul {
@@ -265,6 +341,14 @@ header {
 				font-weight: 700;
 				padding: 8px 0;
 			}
+
+			&.active {
+				display: block;
+			}
+		}
+
+		nav ul li.menu-item-has-children:hover > ul {
+			display: none;
 		}
 
 		.col-3 {

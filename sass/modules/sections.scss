@@ -17,6 +17,7 @@
 		background-position: 0 0;
 		height: 400px;
 		padding: 0;
+		overflow: hidden;
 
 		h5 {
 			color: $colorOne;
@@ -266,15 +267,16 @@
 		font-weight: 200;
 		color: $colorThree;
 		font-size: 1.2em;
-		line-height: 1.4em;
+		line-height: 1.35em;
 	}
 
 	p.large {
-		font-size: 1.6em;
+		font-size: 1.5em;
 	}
 
 	p.bold {
-		font-weight: 500;
+		font-weight: 600;
+		font-size: 2.1em;
 	}
 
 	ul {
@@ -292,7 +294,7 @@
 		}
 
 		p.large {
-			font-size: 1.5em;
+			font-size: 1.6em;
 		}
 	}
 
@@ -306,7 +308,7 @@
 		}
 
 		p.large {
-			font-size: 1.4em;
+			font-size: 1.5em;
 		}
 
 		img {
@@ -319,6 +321,11 @@
 
 		p.large {
 			font-size: 1.1em;
+		}
+
+		p.bold {
+			font-size: 1.4em;
+			line-height: 1.2;
 		}
 
 		h3 {
@@ -386,6 +393,11 @@
 
 .discovery {
 	padding: 0 0 40px 0;
+
+	.col-4 {
+		@include calc(width, "33.3333% - 5px");
+		margin-right: 5px;
+	}
 
 	@include mq("small", "max-width") { 
 		
@@ -513,8 +525,7 @@
 
 .list {
 	border-top: 7px solid $colorOne;
-	background: $colorBg;
-	padding-bottom: 30px;
+	background: #fff;
 	height: auto;
 	overflow: auto;
 
@@ -613,11 +624,20 @@
 }
 
 .cta {
-	@include linear-gradient-b(90deg, $colorOne, $colorTwo);
+	background: #fff;
+	padding: 90px 0; 
+
+	.row {
+		margin: 0;
+	}
 
 	.link-btn-one {
 		width: 50%;
 		float: left;
+	}
+
+	@include mq("small", "max-width") { 
+		padding: 30px 0;
 	}
 }
 
@@ -625,7 +645,11 @@
 	background: $colorBg;
 	height: auto;
 	overflow: hidden;
-	padding: 50px 0;
+	padding: 0 0 20px;
+
+	.row {
+		margin-top: 20px;
+	}
 
 	@include mq("small", "max-width") {
 		padding: 30px 0;
@@ -946,7 +970,7 @@
 }
 
 .page-nav {
-	padding: 40px 0 0 0;
+	padding: 40px 0 25px 0;
 
 	a {
 		color: $colorTypeLight;

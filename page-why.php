@@ -63,11 +63,11 @@
 		<section class="cta">
 			<div class="grid-container">
 				<div class="row">
-					<a href="#" class="link-btn-one">
+					<a href="<?php bloginfo('url'); ?>/approach" class="link-btn-one">
 						<h3>Find out more about our approuch</h3>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right.svg">
 					</a>
-					<a href="#" class="link-btn-one">
+					<a href="<?php bloginfo('url'); ?>/contact" class="link-btn-one">
 						<h3>Interested? Book a free coffee today</h3>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/svg/arrow-right.svg">
 					</a>

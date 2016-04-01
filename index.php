@@ -96,7 +96,7 @@
 		<section class="description">
 			<div class="grid-container">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-10">
 						<p class="large bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non arcu vitae ligula cursus lobortis. Maecenas at sodales nisi. </p>
 						<p class="large">Sed est enim, placerat eget lacus sit amet, bibendum efficitur mi. Aliquam eleifend magna velit, sagittis auctor orci semper non. Nam placerat, lectus ac hendrerit ullamcorper, libero erat sodales nibh, sed convallis diam tellus sed erat.</p>
 					</div>

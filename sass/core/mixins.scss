@@ -28,6 +28,13 @@ $breakpoints: (
   }
 }
 
+/// Calculator 
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
+
 // Transitions
 
 @mixin transition($transition-property, $transition-time, $method) {

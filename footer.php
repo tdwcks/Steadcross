@@ -1,4 +1,3 @@
-
 	<footer>
 		<div class="grid-container">
 			<div class="col-4">
@@ -21,7 +20,7 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 	<?php wp_footer(); ?>
 
 	</body>
